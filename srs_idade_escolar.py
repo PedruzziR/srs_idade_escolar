@@ -23,7 +23,7 @@ def conectar_planilha():
     ]
     creds = Credentials.from_service_account_info(creds_dict, scopes=escopos)
     client = gspread.authorize(creds)
-    return client.open("SRS-2").sheet1  # LEMBRE-SE DE CRIAR A PLANILHA "SRS-2" NO SEU DRIVE
+    return client.open("srs_idade_escolar").sheet1
 
 try:
     planilha = conectar_planilha()
